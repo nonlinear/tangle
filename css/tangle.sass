@@ -1,0 +1,55 @@
+.container
+    margin: 0 auto
+    width: 500px
+ul
+    list-style: none
+    padding: 0
+
+
+.self-toggle
+    display: inline-block
+    padding: 20px
+    border: solid 1px #333
+    text-decoration: none
+
+.self-toggle.self-active
+    border: dashed 1px red
+
+.red-target, .blue-target, .orange-target
+    border: solid 5px #ccc
+    padding: 10px
+    +transition
+    margin-bottom: 20px
+
+.red-target.red-active
+    border-color: red
+    color: darken(red, 20%)
+    padding: 20px 10px
+
+.blue-target.blue-active
+    border-color: blue
+    color: darken(blue, 20%)
+    padding: 20px 10px
+
+.orange-target.orange-active
+    border-color: orange
+    color: darken(orange, 20%)
+    padding: 20px 10px
+
+tt
+    background-color: #ccc
+    display: inline-block
+    padding: 2px 5px
+    .red-active &, .blue-active &, .orange-active &
+        color: black
+    .red-active &
+        background-color: lighten(red, 30%)
+    .blue-active &
+        background-color: lighten(blue, 30%)
+    .orange-active &
+        background-color: lighten(orange, 30%)
+
+.text:before
+    content: "without"
+    .red-active &, .blue-active &, .orange-active &
+        content: "with"
