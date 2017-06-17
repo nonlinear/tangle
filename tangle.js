@@ -1,14 +1,16 @@
-$(".red-toggle").click(function(){
-    $(".red-toggle").toggleClass("red-active");
-    $(".red-target").toggleClass("red-active");
-});
+// $(".red-toggle").click(function(){
+// });
 
-$(".blue-toggle").click(function(){
-    $(".blue-toggle").toggleClass("blue-active");
-    $(".blue-target").toggleClass("blue-active");
-});
+$("[class$=-toggle]").click(function(event){
+    var prefixClass = event.target.className
+    var regex = "^[a-z]*"
+    var prefix = prefixClass.match(regex)[0];
 
-$(".orange-toggle").click(function(){
-    $(".orange-toggle").toggleClass("orange-active");
-    $(".orange-target").toggleClass("orange-active");
-});
+    var toggleActiveClassName = prefix + "-active";
+
+    var toggleTargetClassName = prefix + "-target";
+    var toggleTargetDivName = "." + toggleTargetClassName;
+
+    $(prefixClass).toggleClass(toggleActiveClassName);
+    $(toggleTargetDivName).toggleClass(toggleActiveClassName);
+})
