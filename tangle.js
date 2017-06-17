@@ -3,7 +3,7 @@
 
 $("[class$=-toggle]").click(function(event){
     var prefixClass = event.target.className
-    var regex = "^[a-z]*"
+    var regex = "^[a-z0-9]*"
     var prefix = prefixClass.match(regex)[0];
 
     var toggleActiveClassName = prefix + "-active";
