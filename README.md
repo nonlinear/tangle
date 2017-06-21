@@ -25,10 +25,13 @@ Add complex functions writing only CSS and HTML:
 
 Need different functions on the same page? you can have different prefixes, like `.modal-*` for a modal function, `.sidebar-*` for a sidebar, etc. Prefixes are self contained.
 
-# Future States
+# Soon
 
-- `.*-out` silent class when yanking `.*-active`. for `out` animation states.
-- group trigger: `.*-active` travels thru `.*-group` list of objects. for collapse, tabs.
-- sequence: user defines number, and `*-active-N` cycles thru sequence: for galleries, slideshows.
-- reset toggle function
-- other inputs: for now `_click` is default. Add `_hover`, `_swipe`, maybe.
+|Feature|Description|
+|---|---|
+|review `.*-active` or `.*-toggle`|is it working? let's fix if not.|
+|reset toggle|`*-off` and `*-on` actions|
+|`.*-out`|add silent class for 500ms when yanking `.*-active`. for `out` animation states.|
+|Group action|`.*-active` travels thru `.*-group` list of objects. for collapse, tabs.|
+|Sequence action|user defines number, and `*-active-N` cycles thru sequence: for galleries, slideshows.|
+|Other triggers|for now `_click` is default. Add `_hover`, `_swipe`, maybe.|
