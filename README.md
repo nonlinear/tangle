@@ -34,4 +34,4 @@ Need different functions on the same page? you can have different prefixes, like
 |`.*-out`|add silent class for 500ms when yanking `.*-active`. for `out` animation states.|
 |Group action|`.*-active` travels thru `.*-group` list of objects. for collapse, tabs.|
 |Sequence action|user defines number, and `*-active-N` cycles thru sequence: for galleries, slideshows.|
-|Other triggers|for now `_click` is default. Add `_hover`, `_swipe`, maybe.|
+|Other triggers|for now `_click` is default. Expand triggers with hover, swipe, double-click, on press, etc.|
