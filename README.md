@@ -29,7 +29,6 @@ Need different functions on the same page? you can have different prefixes, like
 
 |Feature|Description|
 |---|---|
-|review `.*-active` or `.*-toggle`|is it working? let's fix if not.|
 |reset toggle|`*-off` and `*-on` actions|
 |`.*-out`|add silent class for 500ms when yanking `.*-active`. for `out` animation states.|
 |Group action|`.*-active` travels thru `.*-group` list of objects. for collapse, tabs.|
