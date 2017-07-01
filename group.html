@@ -3,23 +3,21 @@
 <head>
   <meta charset="UTF-8"/>
   <title>group test</title>
-  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="css/style.css"/>
 </head>
 
 <body>
-
-  <input type="radio" name="group1">
-  <input type="radio" name="group1">
-  <input type="radio" name="group1">
-  <input type="radio" name="group2">
-  <input type="radio" name="group2">
-  <input type="radio" name="group2">
-<hr>
-  <a href="#" class="aaa-group-1">trigger</a>
-  <a href="#" class="aaa-group-2">trigger</a>
-  <a href="#" class="aaa-group-3">trigger</a>
-  <p class="aaa-target-1">aaa</p>
-  <p class="aaa-target-2">aaa</p>
-  <p class="aaa-target-3 aaa-active">aaa</p>
+<div class="container">
+  <div class="tabs">
+    <a href="#" class="tab-group-1 tab-active">tab 1</a>
+  <a href="#" class="tab-group-2">tab 2</a>
+  <a href="#" class="tab-group-3">tab 3</a>
+</div>
+<div class="content">
+    <p class="tab-target-1 tab-active">content 1</p>
+  <p class="tab-target-2">content 2</p>
+  <p class="tab-target-3">content 3</p>
+</div>
+</div>
 </body>
 </html>

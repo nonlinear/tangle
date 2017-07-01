@@ -39,7 +39,7 @@ ul
 .red-toggle.red-active,
 .blue-toggle.blue-active,
 .orange-toggle.orange-active
-    +find(red)
+    font-weight: bold
 
 tt
     background-color: #ccc
@@ -58,3 +58,27 @@ tt
     content: "without"
     .red-active &, .blue-active &, .orange-active &
         content: "with"
+
+
+.visible
+    ul a
+        padding-bottom: 1000px
+        display: block
+    .sidebar
+        right: 0
+        position: fixed
+
+.tabs
+    padding-top: 20px
+    a
+        border: solid 1px #ccc
+        padding: 10px
+        text-decoration: none
+        &.tab-active
+            font-weight: bold
+            background-color: #eee
+
+.content
+    .tab-target-1, .tab-target-2, .tab-target-3
+        &:not(.tab-active)
+            display: none
