@@ -28,6 +28,7 @@
   "private": false,
   "dependencies": {
     "font-awesome": "~4.2.0",
-    "animatewithsass": "geoffgraham.animate.scss#~3.2.2"
+    "animatewithsass": "geoffgraham.animate.scss#~3.2.2",
+    "tile": "*"
   }
 }

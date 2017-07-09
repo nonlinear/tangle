@@ -6,37 +6,78 @@
   <link rel="stylesheet" href="css/style.css"/>
 </head>
 
-<div class="container">
+<div class="container toggle">
   <body>
-  <h1>Tangle Example</h1>
-  <ul>
-    <li>
-      <a href="#" class="toggle red-toggle">Click me (Red toggle)</a>
-    </li>
-    <li>
-      <a href="#" class="toggle blue-toggle">Click me (Blue toggle)</a>
-    </li>
-     <li>
-      <a href="#" class="toggle red-toggle">Click me (Red toggle)</a>
-    </li>
-     <li>
-      <a href="#" class="toggle orange-toggle">Click me (Orange  toggle)</a>
-    </li>
-    </ul>
-
- <div class="red-target">
-  This is the red object <span class="text"></span> <tt>active</tt> class
+    <div class="example">
+      <h1>Toggle Example</h1>
+      <ul>
+        <li>
+          <a href="#" class="red-toggle">Toggle red</a>
+        </li>
+        <li>
+          <a href="#" class="blue-toggle">Toggle blue</a>
+        </li>
+        <li>
+          <a href="#" class="green-toggle">Toggle green</a>
+        </li>
+      </ul>
+      <div class="red-target">
+        This is the red object <span class="text"></span> <tt>active</tt> class
+      </div>
+      <div class="green-target">
+       This is the green object <span class="text"></span> <tt>active</tt> class
+     </div>
+     <div class="red-target">
+      This is  another red object <span class="text"></span> <tt>active</tt> class
+    </div>
+    <div class="blue-target">
+     This is the blue object <span class="text"></span> <tt>active</tt> class
+   </div>
  </div>
-  <div class="orange-target">
-   This is the orange object <span class="text"></span> <tt>active</tt> class
- </div>
-   <div class="red-target">
-  This is  another red object <span class="text"></span> <tt>active</tt> class
- </div>
-  <div class="blue-target">
-   This is the blue object <span class="text"></span> <tt>active</tt> class
- </div>
+ <div class="example group">
+   <h1>Group Example</h1>
+   <div class="tabs">
+    <a href="#" class="tab-group-1 tab-active">tab 1</a>
+    <a href="#" class="tab-group-2">tab 2</a>
+    <a href="#" class="tab-group-3">tab 3</a>
+  </div>
+  <div class="content">
+    <p class="tab-target-1 tab-active">content 1</p>
+    <p class="tab-target-2">content 2</p>
+    <p class="tab-target-3">content 3</p>
+  </div>
 </div>
-  <script src="tangle.js"></script>
+<div class="example out">
+  <h1>Animated example</h1>
+  to show how why <tt>*-out</tt> is important
+</div>
+<div class="example visible">
+  <h1>Visible example</h1>
+  <div class="sidebar">
+   <div class="red-target">
+    This is the red object <span class="text"></span> <tt>active</tt> class
+  </div>
+  <div class="green-target">
+   This is the green object <span class="text"></span> <tt>active</tt> class
+ </div>
+ <div class="red-target">
+  This is  another red object <span class="text"></span> <tt>active</tt> class
+</div>
+<div class="blue-target">
+ This is the blue object <span class="text"></span> <tt>active</tt> class
+</div>
+</div>
+<div class="menu">
+  <a href="#" class="red-visible">Toggle red</a>
+  <a href="#" class="blue-visible">Toggle blue</a>
+  <a href="#" class="green-visible">Toggle green</a>
+
+
+
+</div>
+</div>
+</div>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<script src="tangle.js"></script>
 </body>
 </html>

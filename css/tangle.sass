@@ -15,7 +15,7 @@ ul
 .self-toggle.self-active
     border: dashed 1px red
 
-.red-target, .blue-target, .orange-target
+.red-target, .blue-target, .green-target
     border: solid 5px #ccc
     padding: 10px
     +transition
@@ -31,42 +31,63 @@ ul
     color: darken(blue, 20%)
     padding: 20px 10px
 
-.orange-target.orange-active
-    border-color: orange
-    color: darken(orange, 20%)
+.green-target.green-active
+    border-color: green
+    color: darken(green, 20%)
     padding: 20px 10px
 
 .red-toggle.red-active,
 .blue-toggle.blue-active,
-.orange-toggle.orange-active
+.green-toggle.green-active
     font-weight: bold
 
 tt
     background-color: #ccc
     display: inline-block
     padding: 2px 5px
-    .red-active &, .blue-active &, .orange-active &
+    .red-active &, .blue-active &, .green-active &
         color: black
     .red-active &
         background-color: lighten(red, 30%)
     .blue-active &
         background-color: lighten(blue, 30%)
-    .orange-active &
-        background-color: lighten(orange, 30%)
+    .green-active &
+        background-color: lighten(green, 30%)
 
 .text:before
     content: "without"
-    .red-active &, .blue-active &, .orange-active &
+    .red-active &, .blue-active &, .green-active &
         content: "with"
 
-
 .visible
-    ul a
-        padding-bottom: 1000px
-        display: block
     .sidebar
-        right: 0
-        position: fixed
+        position: -webkit-sticky
+        position: sticky
+        top: 10px
+        margin-right: 140px
+        z-index: 1000
+        div
+            background-color: #FFF
+    a
+        text-decoration: none
+        +disable(link)
+        display: block
+        text-align: right
+        font-weight: bold
+        font-size: 120%
+        padding: 15px
+        padding-bottom: 1000px
+        &:first-of-type
+            background-color: lighten(red, 40%)
+        &:nth-of-type(2)
+            background-color: lighten(blue, 40%)
+        &:nth-of-type(3)
+            background-color: lighten(green, 40%)
+
+.example
+    padding-bottom: 20px
+    &:not(:first-of-type)
+        border-top: solid 1px #ccc
 
 .tabs
     padding-top: 20px
