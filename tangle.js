@@ -1,5 +1,4 @@
 // toggle function
-
 $("[class$=-toggle]").click(function(event){
     var prefixClass = event.target.className
     var regex = "^[a-z0-9]*"
@@ -16,3 +15,17 @@ $("[class$=-toggle]").click(function(event){
 });
 
 // group function
+var tabDivs  = $(".tabs *");
+tabDivs.click(function(event){
+    var contentDivs = $(".content *");
+    var eventClass = event.target.className;
+    var regex = "[1-9a-zA-Z]*$";
+    var suffix = eventClass.match(regex)[0];
+    var newActiveContentClass = "." + "tab-target-" + suffix;
+
+    contentDivs.removeClass("tab-active");
+    $(newActiveContentClass).addClass("tab-active");
+
+    tabDivs.removeClass("tab-active");
+    $(event.target).addClass("tab-active");
+});
