@@ -15,44 +15,44 @@ ul
 .self-toggle.self-active
     border: dashed 1px red
 
-.red-target, .blue-target, .green-target
-    border: solid 5px #ccc
-    padding: 10px
-    +transition
-    margin-bottom: 20px
 
-.red-target.red-active
-    border-color: red
-    color: darken(red, 20%)
-    padding: 20px 10px
+=active($prefix: red, $hex: #f00)
+    .#{$prefix}-target.#{$prefix}-active
+        border-color: $hex
+        color: darken($hex, 20%)
+        padding: 20px 10px
+    .#{$prefix}-toggle.#{$prefix}-active
+        font-weight: bold
+    .#{$prefix}-target
+        border: solid 5px #ccc
+        padding: 10px
+        +transition
+        margin-bottom: 20px
+    .#{$prefix}-active tt
+        background-color: lighten($hex, 30%)
+    .visible a.#{$prefix}-visible
+        background-color: lighten($hex, 40%)
+        text-decoration: none
+        +disable(link)
+        display: block
+        text-align: right
+        font-weight: bold
+        font-size: 120%
+        padding: 15px
+        padding-bottom: 1000px
 
-.blue-target.blue-active
-    border-color: blue
-    color: darken(blue, 20%)
-    padding: 20px 10px
-
-.green-target.green-active
-    border-color: green
-    color: darken(green, 20%)
-    padding: 20px 10px
-
-.red-toggle.red-active,
-.blue-toggle.blue-active,
-.green-toggle.green-active
-    font-weight: bold
++active(red, #f00)
++active(blue, #00f)
++active(green, #0f0)
++active(orange, #FFA500)
++active(purple, #800080)
++active(brown, #A52A2A)
++active(olive, #808000)
 
 tt
     background-color: #ccc
     display: inline-block
     padding: 2px 5px
-    .red-active &, .blue-active &, .green-active &
-        color: black
-    .red-active &
-        background-color: lighten(red, 30%)
-    .blue-active &
-        background-color: lighten(blue, 30%)
-    .green-active &
-        background-color: lighten(green, 30%)
 
 .text:before
     content: "without"
@@ -68,21 +68,6 @@ tt
         z-index: 1000
         div
             background-color: #FFF
-    a
-        text-decoration: none
-        +disable(link)
-        display: block
-        text-align: right
-        font-weight: bold
-        font-size: 120%
-        padding: 15px
-        padding-bottom: 1000px
-        &:first-of-type
-            background-color: lighten(red, 40%)
-        &:nth-of-type(2)
-            background-color: lighten(blue, 40%)
-        &:nth-of-type(3)
-            background-color: lighten(green, 40%)
 
 .example
     padding-bottom: 20px

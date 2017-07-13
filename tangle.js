@@ -1,4 +1,5 @@
 // toggle function
+
 $("[class$=-toggle]").click(function(event){
     var prefixClass = event.target.className
     var regex = "^[a-z0-9]*"
@@ -15,6 +16,7 @@ $("[class$=-toggle]").click(function(event){
 });
 
 // group function
+
 var tabDivs  = $(".tabs *");
 tabDivs.click(function(event){
     var contentDivs = $(".content *");
