@@ -88,3 +88,37 @@ tt
     .tab-target-1, .tab-target-2, .tab-target-3
         &:not(.tab-active)
             display: none
+
+.card-target
+    +radius(normal, 5px)
+    background-color: darken(red, 20%)
+    font-weight: bold
+    color: white
+    text-align: center
+    padding: 50px 20px
+    margin: 10px 25% 10px 25%
+    font-size: 20px
+    +shadow(normal, 0 5px 10px rgba(0, 0, 0, 0.2))
+    opacity: 0
+    &.card-active
+        +flipInY
+    &.card-out
+        +rollOut
+
+
+.nottabs
+    padding-top: 20px
+    a
+        border: solid 1px red
+        padding: 10px
+        text-decoration: none
+        &.nottab-active
+            font-weight: bold
+            background-color: lighten(red, 30%)
+            color: white
+
+.content
+    .nottab-target-1, .nottab-target-2, .nottab-target-3
+        &:not(.nottab-active)
+            display: none
+

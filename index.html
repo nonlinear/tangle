@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8"/>
   <title>toggle test</title>
+  <meta name="viewport" content="width=device-width, user-scalable=no" />
   <link rel="stylesheet" href="css/style.css"/>
 </head>
 
@@ -46,10 +47,22 @@
     <p class="tab-target-2">content 2</p>
     <p class="tab-target-3">content 3</p>
   </div>
+<hr>
+   <div class="nottabs">
+    <a href="javascript:void(0)" class="nottab-group-1 nottab-active">nottab 1</a>
+    <a href="javascript:void(0)" class="nottab-group-2">nottab 2</a>
+    <a href="javascript:void(0)" class="nottab-group-3">nottab 3</a>
+  </div>
+  <div class="content">
+    <p class="nottab-target-1 nottab-active">content 1</p>
+    <p class="nottab-target-2">content 2</p>
+    <p class="nottab-target-3">content 3</p>
+  </div>
 </div>
 <div class="example out">
   <h1>Animated example</h1>
-  to show how why <tt>*-out</tt> is important
+<a href="javascript:void(0)" class="card-toggle">Click to toggle card</a>
+<div class="card-target">I appear smoothly, but disappear bluntly.</div>
 </div>
 <div class="example visible">
   <h1>Visible example</h1>
@@ -72,12 +85,10 @@
   <a href="javascript:void(0)" class="brown-visible">Toggle brown</a>
   <a href="javascript:void(0)" class="olive-visible">Toggle olive</a>
 
-
-
 </div>
 </div>
 </div>
-<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<script src="bower_components/jquery/dist/jquery.js"></script>
 <script src="tangle.js"></script>
 </body>
 </html>
